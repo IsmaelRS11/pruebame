@@ -1,0 +1,586 @@
+
+dell@DESKTOP-BLTOSER MINGW64 ~
+$ git init pruebame
+Initialized empty Git repository in C:/Users/dell/pruebame/.git/
+
+dell@DESKTOP-BLTOSER MINGW64 ~
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+dell@DESKTOP-BLTOSER MINGW64 ~
+$ cd c:
+
+dell@DESKTOP-BLTOSER MINGW64 /c
+$ cd pruebame
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git add .
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git commit -m "readme"
+[master (root-commit) 3a9f914] readme
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git branch produccion
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git branch ventas
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git branch recurso_humano
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git branch
+* master
+  produccion
+  recurso_humano
+  ventas
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git checkout produccion
+Switched to branch 'produccion'
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git branch
+  master
+* produccion
+  recurso_humano
+  ventas
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git status
+On branch produccion
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        imagenproducto.jpg
+        materia prima.txt
+        productofinal.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git checkout ventas
+Switched to branch 'ventas'
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (ventas)
+$ git status
+On branch ventas
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        imagenproducto.jpg
+        materia prima.txt
+        productofinal.txt
+        tiendas.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (ventas)
+$ git checkout recurso_humano
+Switched to branch 'recurso_humano'
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (recurso_humano)
+$ git status
+On branch recurso_humano
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        empleados.txt
+        imagenproducto.jpg
+        materia prima.txt
+        productofinal.txt
+        tiendas.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (recurso_humano)
+$ git checkout produccion
+Switched to branch 'produccion'
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git merge master
+Already up to date.
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git add .
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git commit -m "version1"
+[produccion bfe47f4] version1
+ 5 files changed, 8 insertions(+)
+ create mode 100644 empleados.txt
+ create mode 100644 imagenproducto.jpg
+ create mode 100644 materia prima.txt
+ create mode 100644 productofinal.txt
+ create mode 100644 tiendas.txt
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=<remote>/<branch> produccion
+
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git pull produccion
+fatal: 'produccion' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git pull pruebame
+fatal: 'pruebame' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git status
+On branch produccion
+nothing to commit, working tree clean
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git remote https://github.com/IsmaelRS11/pruebame.git
+error: unknown subcommand: `https://github.com/IsmaelRS11/pruebame.git'
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename [--[no-]progress] <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git remote add origin https://github.com/IsmaelRS11/pruebame.git
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git status
+On branch produccion
+nothing to commit, working tree clean
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 252 bytes | 252.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/IsmaelRS11/pruebame.git
+ * [new branch]      master -> master
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git push origin produccion
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 192.65 KiB | 19.26 MiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'produccion' on GitHub by visiting:
+remote:      https://github.com/IsmaelRS11/pruebame/pull/new/produccion
+remote:
+To https://github.com/IsmaelRS11/pruebame.git
+ * [new branch]      produccion -> produccion
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git push origin produccion
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 192.65 KiB | 17.51 MiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'produccion' on GitHub by visiting:
+remote:      https://github.com/IsmaelRS11/pruebame/pull/new/produccion
+remote:
+To https://github.com/IsmaelRS11/pruebame.git
+ * [new branch]      produccion -> produccion
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git checkout ventas
+Switched to branch 'ventas'
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (ventas)
+$ git add tiendas.txt
+fatal: pathspec 'tiendas.txt' did not match any files
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (ventas)
+$ git checkout produccion
+Switched to branch 'produccion'
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git push origin ventas
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'ventas' on GitHub by visiting:
+remote:      https://github.com/IsmaelRS11/pruebame/pull/new/ventas
+remote:
+To https://github.com/IsmaelRS11/pruebame.git
+ * [new branch]      ventas -> ventas
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git push recurso humano
+error: src refspec humano does not match any
+error: failed to push some refs to 'recurso'
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git push recurso_humano
+fatal: 'recurso_humano' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git branch
+  master
+* produccion
+  recurso_humano
+  ventas
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git push recurso_humano
+fatal: 'recurso_humano' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git push origin recurso_humano
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'recurso_humano' on GitHub by visiting:
+remote:      https://github.com/IsmaelRS11/pruebame/pull/new/recurso_humano
+remote:
+To https://github.com/IsmaelRS11/pruebame.git
+ * [new branch]      recurso_humano -> recurso_humano
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git tag version1
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git push
+fatal: The current branch produccion has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin produccion
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$  git push --set-upstream origin produccion
+Everything up-to-date
+branch 'produccion' set up to track 'origin/produccion'.
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git push origin version1
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/IsmaelRS11/pruebame.git
+ * [new tag]         version1 -> version1
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (produccion)
+$ git checkout master
+Switched to branch 'master'
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git push origin version1
+Everything up-to-date
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git pull origin master
+From https://github.com/IsmaelRS11/pruebame
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git checkout recurso_humano
+Switched to branch 'recurso_humano'
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (recurso_humano)
+$ dir
+README.md
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (recurso_humano)
+$ git clone https://github.com/IsmaelRS11/pruebame.git
+Cloning into 'pruebame'...
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 9 (delta 0), reused 9 (delta 0), pack-reused 0
+Receiving objects: 100% (9/9), 192.87 KiB | 901.00 KiB/s, done.
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (recurso_humano)
+$ git status
+On branch recurso_humano
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        pruebame/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (recurso_humano)
+$ git add empleados
+fatal: pathspec 'empleados' did not match any files
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (recurso_humano)
+$ git merch
+git: 'merch' is not a git command. See 'git --help'.
+
+The most similar commands are
+        fetch
+        merge
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (recurso_humano)
+$ git branch
+  master
+  produccion
+* recurso_humano
+  ventas
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (recurso_humano)
+$ git checkout master
+Switched to branch 'master'
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ dir
+README.md  pruebame
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git merge produccion
+Updating 3a9f914..bfe47f4
+Fast-forward
+ empleados.txt      |   5 +++++
+ imagenproducto.jpg | Bin 0 -> 218165 bytes
+ materia prima.txt  |   0
+ productofinal.txt  |   0
+ tiendas.txt        |   3 +++
+ 5 files changed, 8 insertions(+)
+ create mode 100644 empleados.txt
+ create mode 100644 imagenproducto.jpg
+ create mode 100644 materia prima.txt
+ create mode 100644 productofinal.txt
+ create mode 100644 tiendas.txt
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git add .
+warning: adding embedded git repository: pruebame
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> pruebame
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached pruebame
+hint:
+hint: See "git help submodule" for more information.
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   pruebame
+
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git add .
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git commit -m "branch master"
+[master 5d8ee12] branch master
+ 1 file changed, 1 insertion(+)
+ create mode 160000 pruebame
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 265 bytes | 265.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/IsmaelRS11/pruebame.git
+   3a9f914..5d8ee12  master -> master
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git push origin version1
+Everything up-to-date
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git checkout recurso_humano
+warning: unable to rmdir 'pruebame': Directory not empty
+Switched to branch 'recurso_humano'
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (recurso_humano)
+$ dir
+README.md  pruebame
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (recurso_humano)
+$ git checkout master
+Switched to branch 'master'
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git checkout recurso_humano
+error: Your local changes to the following files would be overwritten by checkout:
+        empleados.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git checkout recurso_humano
+error: Your local changes to the following files would be overwritten by checkout:
+        empleados.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git add .
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git checkout recurso_humano
+error: Your local changes to the following files would be overwritten by checkout:
+        empleados.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git commit -m "empleado"
+[master f58e189] empleado
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (master)
+$ git checkout recurso_humano
+warning: unable to rmdir 'pruebame': Directory not empty
+Switched to branch 'recurso_humano'
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (recurso_humano)
+$ git add .
+warning: in the working copy of 'empleados.txt', LF will be replaced by CRLF the next time Git touches it
+warning: adding embedded git repository: pruebame
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> pruebame
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached pruebame
+hint:
+hint: See "git help submodule" for more information.
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (recurso_humano)
+$ git status
+On branch recurso_humano
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   empleados.txt
+        new file:   pruebame
+
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (recurso_humano)
+$ git add empleados.txt
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (recurso_humano)
+$ git commit -m "empleados"
+[recurso_humano bfd280c] empleados
+ 2 files changed, 12 insertions(+)
+ create mode 100644 empleados.txt
+ create mode 160000 pruebame
+
+dell@DESKTOP-BLTOSER MINGW64 /c/pruebame (recurso_humano)
+$ git push origin recurso_humano
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 376 bytes | 376.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/IsmaelRS11/pruebame.git
+   3a9f914..bfd280c  recurso_humano -> recurso_humano
